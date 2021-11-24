@@ -1,0 +1,22 @@
+type EventDto {
+    id:Int
+    category:String
+    title:String
+    description:String
+}
+
+input InputEventQuery {
+    category:String
+    title:String
+}
+
+input InputEvent {
+    category:String
+    title:String
+    description:String
+    organizer : InputOrganizer
+}
+
+input InputOrganizer {
+    id:Int
+}
