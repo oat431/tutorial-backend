@@ -7,9 +7,11 @@ import org.springframework.stereotype.Service;
 import se331.lab.rest.dao.EventDao;
 import se331.lab.rest.dao.OrganizerDao;
 import se331.lab.rest.entity.Event;
+import se331.lab.rest.entity.EventQuery;
 import se331.lab.rest.entity.Organizer;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 public class EventServiceImpl implements EventService{
@@ -44,5 +46,10 @@ public class EventServiceImpl implements EventService{
     @Override
     public Page<Event> getEvents(String title, Pageable pageable) {
         return eventDao.getEvent(title,pageable);
+    }
+
+    @Override
+    public List<Event> getEventByTitleAndCat(EventQuery query) {
+        return eventDao.getEventByTitleAndCat(query);
     }
 }
