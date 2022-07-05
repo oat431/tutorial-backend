@@ -15,5 +15,5 @@ public interface EventDao {
     Event save(Event event);
     Page<Event> getEvent(String name, Pageable page);
 
-    List<Event> getEventByTitleAndCat(EventQuery eventQuery);
+    List<Event> getEventByTitleAndCat(EventQuery query);
 }

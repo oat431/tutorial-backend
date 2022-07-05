@@ -13,15 +13,15 @@ public class Lab07Application {
         SpringApplication.run(Lab07Application.class, args);
     }
 
-//    @Bean
-//    public WebMvcConfigurer corsConfigurer() {
-//        return new WebMvcConfigurer() {
-//            @Override
-//            public void addCorsMappings(CorsRegistry registry) {
-//                registry.addMapping("/**")
-//                        .allowedOrigins("http://localhost:3000","http://54.237.111.132:8999")
-//                        .exposedHeaders("x-total-count");
-//            }
-//        };
-//    }
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**")
+                        .allowedOrigins("http://localhost:3000","http://54.237.111.132:8999")
+                        .exposedHeaders("x-total-count");
+            }
+        };
+    }
 }

@@ -35,6 +35,7 @@ public class EventController {
         }
         HttpHeaders responseHeader = new HttpHeaders();
         responseHeader.set("x-total-count", String.valueOf(pageOutput.getTotalElements()));
+//        System.out.println(LabMapper.INSTANCE.getEventDto(pageOutput.getContent()));
         return new ResponseEntity<>(LabMapper.INSTANCE.getEventDto(pageOutput.getContent()), responseHeader, HttpStatus.OK);
 
     }

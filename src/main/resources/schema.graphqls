@@ -5,6 +5,20 @@ type EventDto {
     description:String
 }
 
+input InputEventQuery{
+    title:String
+    category:String
+}
+
+input InputEvent{
+    title:String
+    category:String
+    description:String
+    organizer: InputOrganizer
+}
+
+input InputOrganizer{
+    id: Int
 input InputEventQuery {
     category:String
     title:String
