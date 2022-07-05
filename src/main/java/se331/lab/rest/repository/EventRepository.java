@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import se331.lab.rest.entity.Event;
+import se331.lab.rest.entity.EventQuery;
 
 import java.util.List;
 
@@ -16,5 +17,6 @@ public interface EventRepository extends JpaRepository<Event,Long> {
     Page<Event> findByTitleContainingOrDescriptionContaining(String title, String description, Pageable pageRequest);
     Page<Event> findByTitleContainingAndDescriptionContaining(String title, String description, Pageable pageRequest);
     Page<Event> findByTitleIgnoreCaseContainingOrDescriptionIgnoreCaseContainingOrOrganizer_NameIgnoreCaseContaining(String title, String description, String organizerName, Pageable pageRequest);
-    List<Event> findByTitleIgnoreCaseContainingAndCategory(String title, String category);
+    List<Event> findByTitleIgnoreCaseContainingAndCategory(String title,String category);
+
 }

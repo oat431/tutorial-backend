@@ -44,7 +44,7 @@ public class EventDaoDbImpl implements EventDao {
     }
 
     @Override
-    public List<Event> getEventByTitleAndCat(EventQuery eventQuery) {
-        return eventRepository.findByTitleIgnoreCaseContainingAndCategory(eventQuery.getTitle(),eventQuery.getCategory());
+    public List<Event> getEventByTitleAndCat(EventQuery query) {
+        return eventRepository.findByTitleIgnoreCaseContainingAndCategory(query.getTitle(), query.getCategory());
     }
 }

@@ -4,6 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
+import org.springframework.http.ResponseEntity;
 import se331.lab.rest.entity.*;
 import java.util.stream.Collectors;
 import java.util.List;
@@ -25,5 +26,5 @@ public interface LabMapper {
                     ".collect(Collectors.toList()))")
     OrganizerAuthDTO getOrganizerAuthDTO(Organizer organizer);
 
-
+    AccessTokenDTO getAccessToken(AccessTokenDTO accessToken);
 }

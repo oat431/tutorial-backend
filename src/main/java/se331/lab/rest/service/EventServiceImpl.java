@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import se331.lab.rest.dao.EventDao;
 import se331.lab.rest.dao.OrganizerDao;
 import se331.lab.rest.entity.Event;
+import se331.lab.rest.entity.EventQuery;
 import se331.lab.rest.entity.Organizer;
 import se331.lab.rest.graphql.EventQuery;
 
@@ -49,7 +50,7 @@ public class EventServiceImpl implements EventService{
     }
 
     @Override
-    public List<Event> getEventByTitleAndCat(EventQuery eventQuery) {
-        return eventDao.getEventByTitleAndCat(eventQuery);
+    public List<Event> getEventByTitleAndCat(EventQuery query) {
+        return eventDao.getEventByTitleAndCat(query);
     }
 }
